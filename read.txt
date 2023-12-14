@@ -1,0 +1,39 @@
+biblioteca==paquete==libreria
+
+chance = genera datos aleatorios nombre,email,edad
+readline-sync = es un input o un prompt donde el user ingresa datos
+
+
+-----------------------------
+
+npm init -y >> crea package.json (paquete donde se instalan las librerias)
+npm install>> (npm i) instala dependencias
+
+npm install chance >> esto agrega dentro de package.json las dependencies + una carpeta node.modules con una carpeta p/c libreria agregada
+
+
+La palabra clave require es específica de Node.js y se utiliza para cargar módulos en tu aplicación.
+Los módulos son piezas de código reutilizable que puedes utilizar en tu programa. 
+En tu código, estás utilizando require para importar la biblioteca 
+
+La palabra clave new se utiliza para crear una instancia de un objeto
+
+const Chance = require("chance");   >>> Importa la biblioteca "chance"
+const chance = new Chance();   >>>Crea una nueva instancia de la clase Chance y la asigna una variable
+
+const randomEmail= chance.email();
+const randomAge=chance.age();
+const randomName=chance.name();
+
+console.log("Nombre " , randomName);
+console.log("Edad ", randomAge);
+console.log("Email ", randomEmail);
+
+
+
+------------------------importaar y exportar modulos de funciones-------------
+const funcion = (a,b) =>{ return a+b}; >>>funcion
+
+module.exports = { funcion };  >>>>exporto
+
+const { funcion } = require("./nombre-del-archivo-donde-esta-la-funcion"); >>importo
